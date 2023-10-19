@@ -17,6 +17,9 @@ selectElement.addEventListener("change", function () {
   //   console.log("selected value: " + selectValue);
 });
 
+// ticket-offer variable
+let ticketOfferVariable = "Standard ticket";
+
 // selected variables
 const minor = "minor";
 const elderly = "elderly";
@@ -26,7 +29,12 @@ sendBtn.addEventListener("click", function () {
   //   console.log("send button test");
   const userName = userNameInput.value;
   const userKm = parseInt(userKmInput.value);
-  console.log(typeof userKm)
+  console.log(typeof userKm);
+
+  if (userName === "" || isNaN(userKm)) {
+    alert("Please enter name and kilometers");
+    window.location.reload();
+  }
 
   let ticketPrice = 0.21 * userKm;
 
@@ -43,12 +51,20 @@ sendBtn.addEventListener("click", function () {
     ticketPrice = ticketPrice.toFixed(2).replace(".", ",");
   }
 
+  if (selectValue === minor) {
+    ticketOfferVariable = "20% discount";
+  } else if (selectValue === elderly) {
+    ticketOfferVariable = "40% discount";
+  } else {
+    ticketOfferVariable = "Standard ticket";
+  }
+
   const coach = Math.floor(Math.random() * 10 + 1);
-  const ip_code = Math.floor(Math.random() * 100000);
+  const ipCode = Math.floor(Math.random() * 100000);
 
-
-//   output
-  document.getElementById("ip-code").innerHTML = ip_code;
+  //   output
+  document.getElementById("ticket-offer").innerHTML = ticketOfferVariable;
+  document.getElementById("ip-code").innerHTML = ipCode;
   document.getElementById("coach").innerHTML = coach;
   document.getElementById("passenger-name").innerHTML = userName;
   document.getElementById("ticket-price").innerHTML = ticketPrice;
@@ -65,5 +81,4 @@ clearBtn.addEventListener("click", function () {
   document.getElementById("coach").innerHTML = "";
   document.getElementById("passenger-name").innerHTML = "";
   document.getElementById("ticket-price").innerHTML = "";
- 
 });

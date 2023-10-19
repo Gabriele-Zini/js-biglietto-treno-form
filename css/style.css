@@ -1,0 +1,50 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* debug */
+    /* border: 2px solid black; */
+}
+
+:root {
+
+}
+
+/* COMMON */
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+/* Utilities */
+
+.d-flex {
+    display: flex;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.mx-5 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.flex-dir-column {
+    flex-direction: column;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.justify-content-space-beetween {
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+

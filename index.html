@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="module my-5 d-flex flex-dir-column">
+        <div class="d-flex justify-content-space-beetween">
+          <div class="input-item">
+            <label for="name">Username</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="input-item">
+            <label for="km">Km</label>
+            <input type="text" id="km" />
+          </div>
+
+          <div class="input-item">
+            <label for="age">Age</label>
+            <select id="age">
+              <option value="">Select one</option>
+              <option value="minor">Minor</option>
+              <option value="adult">Adult</option>
+              <option value="elderly">Elderly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons align-self-center my-5">
+          <button id="send">Send</button>
+          <button id="clear">Clear</button>
+        </div>
+      </section>
+
+      <section class="result-section d-flex justify-content-space-beetween">
+        <div>
+          <h3>Passenger Name</h3>
+          <p id="passenger-name" class=""></p>
+        </div>
+        <div>
+          <h3>Ticket offer</h3>
+          <p id="ticket-price" class="ticket-offer"></p>
+        </div>
+        <div>
+          <h3>Coach</h3>
+          <p id="passenger-name" class="hidden coach"></p>
+        </div>
+        <div>
+          <h3>IP code</h3>
+          <p id="passenger-name" class="hidden ip-code"></p>
+        </div>
+        <div>
+          <h3>Ticket price</h3>
+          <p id="passenger-name" class="hidden ticket-price"></p>
+        </div>
+      </section>
+    </div>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>

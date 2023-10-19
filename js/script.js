@@ -31,7 +31,7 @@ sendBtn.addEventListener("click", function () {
   const userKm = parseInt(userKmInput.value);
   console.log(typeof userKm);
 
-  if (userName === " " || isNaN(userKm)) {
+  if (userName.trim() === "" || isNaN(userKm)) {
     alert("Please enter name and kilometers");
     window.location.reload();
   }

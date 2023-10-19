@@ -14,17 +14,19 @@ const sendBtn = document.getElementById("send");
 const selectElement = document.getElementById("age");
 selectElement.addEventListener("change", function () {
   const selectValue = selectElement.value;
-//   console.log("selected value: " + selectValue);
+  //   console.log("selected value: " + selectValue);
 });
 
 // selected variables
 const minor = "minor";
 const elderly = "elderly";
 
+// btn event listener
 sendBtn.addEventListener("click", function () {
   //   console.log("send button test");
   const userName = userNameInput.value;
-  const userKm = userKmInput.value;
+  const userKm = parseInt(userKmInput.value);
+  console.log(typeof userKm)
 
   let ticketPrice = 0.21 * userKm;
 
@@ -41,11 +43,16 @@ sendBtn.addEventListener("click", function () {
     ticketPrice = ticketPrice.toFixed(2).replace(".", ",");
   }
 
+  const coach = Math.floor(Math.random() * 10 + 1);
+  const ip_code = Math.floor(Math.random() * 100000);
+
+
+//   output
+  document.getElementById("ip-code").innerHTML = ip_code;
+  document.getElementById("coach").innerHTML = coach;
   document.getElementById("passenger-name").innerHTML = userName;
   document.getElementById("ticket-price").innerHTML = ticketPrice;
 });
-
-
 
 // clear button
 const clearBtn = document.getElementById("clear");
@@ -54,6 +61,9 @@ clearBtn.addEventListener("click", function () {
   userNameInput.value = " ";
   userKmInput.value = " ";
 
+  document.getElementById("ip-code").innerHTML = "";
+  document.getElementById("coach").innerHTML = "";
   document.getElementById("passenger-name").innerHTML = "";
   document.getElementById("ticket-price").innerHTML = "";
+ 
 });

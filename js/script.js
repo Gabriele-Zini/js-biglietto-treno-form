@@ -31,11 +31,12 @@ sendBtn.addEventListener("click", function () {
   const userKm = parseInt(userKmInput.value);
   console.log(typeof userKm);
 
-  if (userName.trim() === "" || isNaN(userKm)) {
+  if (userName.trim() === "" || (isNaN(userKm) || userKm < 0)) {
     alert("Please enter name and kilometers");
     window.location.reload();
   }
 
+  // ticket price
   let ticketPrice = 0.21 * userKm;
 
   const selectValue = selectElement.value;

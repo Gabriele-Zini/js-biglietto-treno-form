@@ -15,7 +15,7 @@
 /* COMMON */
 body {
     background-color: var(--bg-color);
-    background-image: url(./img/bg-img.jpeg);
+    background-size: cover;
 }
 
 .container {
@@ -35,6 +35,8 @@ body {
 .ms_button {
     background-color: lightgrey;
     color: red;
+    border: 2px solid crimson;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
 }
 
 .ms_button:checked {
@@ -52,4 +54,7 @@ body {
 
 .ms_border {
     border: 2px solid rgb(204, 196, 196)
+}
+p {
+    font-size: 1.2rem;
 }

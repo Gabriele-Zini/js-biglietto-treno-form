@@ -15,7 +15,9 @@
 /* COMMON */
 body {
     background-color: var(--bg-color);
-    background-size: cover;
+    background-attachment: fixed;
+    background-size:cover;
+    background: url(../img/endless-constellation.png);
 }
 
 .container {
@@ -29,13 +31,13 @@ body {
 }
 
 .bg-div {
-    background-color: var(--bg-pass-div);
+    background-color: rgba(162, 0, 255, 0.248);
 }
 
 .ms_button {
     background-color: lightgrey;
-    color: red;
-    border: 2px solid crimson;
+    color: rgb(88, 14, 14);
+    border: 2px solid rgb(100, 47, 57);
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
 }
 
@@ -49,11 +51,11 @@ body {
     filter:contrast(1);
     border-radius: 20px;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, .4);
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .4);
 }
 
 .ms_border {
-    border: 2px solid rgb(204, 196, 196)
+    border: 1px solid rgba(204, 196, 196)
 }
 p {
     font-size: 1.2rem;

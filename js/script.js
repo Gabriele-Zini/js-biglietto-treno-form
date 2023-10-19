@@ -31,7 +31,7 @@ sendBtn.addEventListener("click", function () {
   const userKm = parseInt(userKmInput.value);
   console.log(typeof userKm);
 
-  if (userName === "" || isNaN(userKm)) {
+  if (userName === " " || isNaN(userKm)) {
     alert("Please enter name and kilometers");
     window.location.reload();
   }
@@ -51,6 +51,8 @@ sendBtn.addEventListener("click", function () {
     ticketPrice = ticketPrice.toFixed(2).replace(".", ",");
   }
 
+
+//   ticket offer conditions
   if (selectValue === minor) {
     ticketOfferVariable = "20% discount";
   } else if (selectValue === elderly) {
@@ -59,7 +61,10 @@ sendBtn.addEventListener("click", function () {
     ticketOfferVariable = "Standard ticket";
   }
 
+//   random coach number
   const coach = Math.floor(Math.random() * 10 + 1);
+
+//   random IP code
   const ipCode = Math.floor(Math.random() * 100000);
 
   //   output
@@ -77,6 +82,8 @@ clearBtn.addEventListener("click", function () {
   userNameInput.value = " ";
   userKmInput.value = " ";
 
+
+  document.getElementById("ticket-offer").innerHTML = "";
   document.getElementById("ip-code").innerHTML = "";
   document.getElementById("coach").innerHTML = "";
   document.getElementById("passenger-name").innerHTML = "";

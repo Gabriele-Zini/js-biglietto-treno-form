@@ -8,43 +8,48 @@
 }
 
 :root {
-
+    --bg-color: hsl(338.18deg 80.49% 40.2%);
+    --bg-pass-div: hsl(0, 16%, 64%);
 }
 
 /* COMMON */
+body {
+    background-color: var(--bg-color);
+    background-image: url(./img/bg-img.jpeg);
+}
+
 .container {
     margin: 0 auto;
     width: 80%;
 }
 /* Utilities */
 
-.d-flex {
-    display: flex;
+.ms_min-height {
+    min-height: 150px;
 }
 
-.my-5 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+.bg-div {
+    background-color: var(--bg-pass-div);
 }
 
-.mx-5 {
-    margin-left: 3rem;
-    margin-right: 3rem;
+.ms_button {
+    background-color: lightgrey;
+    color: red;
 }
 
-.flex-dir-column {
-    flex-direction: column;
+.ms_button:checked {
+    border: orange;
+    background-color: rgb(150, 119, 119);
 }
 
-.align-self-center {
-    align-self: center;
+
+.ms_card {
+    filter:contrast(1);
+    border-radius: 20px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, .4);
+    background-color: rgba(255, 255, 255, .8);
 }
 
-.justify-content-space-beetween {
-    justify-content: space-between;
+.ms_border {
+    border: 2px solid rgb(204, 196, 196)
 }
-
-.hidden {
-    display: none;
-}
-

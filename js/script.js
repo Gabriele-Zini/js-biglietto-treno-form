@@ -10,6 +10,8 @@ const selectElement = document.getElementById("age");
 
 const resultSection = document.querySelector(".result-section");
 
+const titleTicket = document.querySelector(".ms_title-ticket")
+
 // PROGRAM LOGIC
 
 // user input send button
@@ -73,6 +75,8 @@ sendBtn.addEventListener("click", function () {
   const ipCode = Math.floor(Math.random() * 100000);
 
   //   output
+  titleTicket.classList.remove('d-none');
+  resultSection.classList.remove('d-none');
   document.getElementById("ticket-offer").innerHTML = ticketOfferVariable;
   document.getElementById("ip-code").innerHTML = ipCode;
   document.getElementById("coach").innerHTML = coach;
@@ -87,7 +91,8 @@ clearBtn.addEventListener("click", function () {
   userNameInput.value = " ";
   userKmInput.value = " ";
 
-
+  resultSection.classList.add('d-none');
+  titleTicket.classList.add('d-none');
   document.getElementById("ticket-offer").innerHTML = "";
   document.getElementById("ip-code").innerHTML = "";
   document.getElementById("coach").innerHTML = "";

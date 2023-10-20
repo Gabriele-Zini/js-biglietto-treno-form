@@ -1,9 +1,12 @@
-// data collection
+// DATA COLLECTION
+
 const userNameInput = document.getElementById("name");
 // console.log("test");
 
 const userKmInput = document.getElementById("km");
 // console.log("test km");
+
+const selectElement = document.getElementById("age");
 
 const resultSection = document.querySelector(".result-section");
 
@@ -11,7 +14,8 @@ const resultSection = document.querySelector(".result-section");
 
 // user input send button
 const sendBtn = document.getElementById("send");
-const selectElement = document.getElementById("age");
+
+// select form input
 selectElement.addEventListener("change", function () {
   const selectValue = selectElement.value;
   //   console.log("selected value: " + selectValue);
